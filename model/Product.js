@@ -8,17 +8,11 @@ class Product {
         this.descr = descr;
     }
 
-    // static getAllProduct(cb) {
-    //     const sql = 'Select * from "Product"';
-    //     queryDB(sql, (err, result) => {
-    //         if (err) return cb(err);
-    //         cb(undefined, result.rows);
-    //     });
-    // }
-
-    static getAllProduct() {
-        return new Promise((resolve, reject)=>{
-            ``
+    static getAllProduct(cb) {
+        const sql = 'Select * from "Product"';
+        queryDB(sql, (err, result) => {
+            if (err) return cb(err);
+            cb(undefined, result.rows);
         });
     }
 
